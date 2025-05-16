@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DevProfile | Statistics</title>
+    <link rel="stylesheet" href="profileStatisticsStyle.css" />
+  </head>
+  <body>
+    <div class="glow glow-1"></div>
+    <div class="glow glow-2"></div>
+
+    <div class="container">
+      <header>
+        <h1>DevProfile</h1>
+        <h2>Showcase your development journey with style</h2>
+      </header>
+
+      <div class="card">
+        <form id="profileForm">
+          <div class="form-row">
+            <div class="form-col">
+              <div class="form-group">
+                <label for="fullName">Full Name</label>
+                <input
+                  type="text"
+                  id="fullName"
+                  placeholder="Enter your full name"
+                  required
+                />
+              </div>
+            </div>
+            <div class="form-col">
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input
+                  type="email"
+                  id="email"
+                  placeholder="Enter your email"
+                  required
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-col">
+              <div class="form-group">
+                <label for="yearsExperience">Years of Experience</label>
+                <select id="yearsExperience" required>
+                  <option value="" disabled selected>Select experience</option>
+                  <option value="1">1 year</option>
+                  <option value="2">2 years</option>
+                  <option value="3">3 years</option>
+                  <option value="4">4 years</option>
+                  <option value="5">5 years</option>
+                  <option value="6">6 years</option>
+                  <option value="7">7 years</option>
+                  <option value="8">8 years</option>
+                  <option value="9">9 years</option>
+                  <option value="10">10+ years</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-col">
+              <div class="form-group">
+                <label for="jobTitle">Current Job Title</label>
+                <input
+                  type="text"
+                  id="jobTitle"
+                  placeholder="e.g. Frontend Developer"
+                  required
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-col">
+              <div class="form-group">
+                <label for="websitesDeveloped">Websites Developed</label>
+                <input
+                  type="number"
+                  id="websitesDeveloped"
+                  min="0"
+                  placeholder="Enter number of websites"
+                  required
+                />
+              </div>
+            </div>
+            <div class="form-col">
+              <div class="form-group">
+                <label for="appsMade">Apps Made</label>
+                <input
+                  type="number"
+                  id="appsMade"
+                  min="0"
+                  placeholder="Enter number of apps"
+                  required
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="skills">Key Skills (comma-separated)</label>
+            <input
+              type="text"
+              id="skills"
+              placeholder="e.g. JavaScript, React, Node.js"
+            />
+          </div>
+
+          <div class="buttons">
+            <button type="button" id="measureBtn" class="btn btn-measure">
+              Measure Profile
+            </button>
+            <button type="submit" class="btn btn-submit">
+              Create Portfolio
+            </button>
+          </div>
+        </form>
+
+        <div class="profile-status" id="profileStatus" style="display: none">
+          <div class="status-title">Your Profile Highlights</div>
+          <div class="profile-highlight" id="profileHighlight"></div>
+        </div>
+      </div>
+    </div>
+    <script src="profileStatisticsScript.js"></script>
+  </body>
+</html>
